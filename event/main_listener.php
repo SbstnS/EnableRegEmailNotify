@@ -66,6 +66,14 @@ class main_listener implements EventSubscriberInterface
             $phpbb_notifications->add_subscription('notification.type.quote', 0, 'notification.method.email', $user_id);
             $phpbb_notifications->add_subscription('notification.type.pm', 0, 'notification.method.email', $user_id);
             $phpbb_notifications->add_subscription('moderation_queue', 0, 'notification.method.email', $user_id);
+			
+			//Enable additional notifications
+            $phpbb_notifications->add_subscription('notification.type.bookmark', 0, 'notification.method.email', $user_id);
+            $phpbb_notifications->add_subscription('notification.type.forum', 0, 'notification.method.email', $user_id);
+            $phpbb_notifications->add_subscription('notification.type.report_pm_closed', 0, 'notification.method.email', $user_id);
+            $phpbb_notifications->add_subscription('notification.type.report_post_closed', 0, 'notification.method.email', $user_id);
+            $phpbb_notifications->add_subscription('notification.type.postlove_notification', 0, 'notification.method.email', $user_id);
+            $phpbb_notifications->add_subscription('paul999.mention.notification.type.mention', 0, 'notification.method.email', $user_id);
         }
 	}
 }
